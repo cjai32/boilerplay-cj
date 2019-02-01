@@ -1,0 +1,104 @@
+.main-menu {
+	margin: 0 fluidity(20px, $container);
+
+	& > ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@include clearfix();
+
+		& > li {
+			position: relative;
+			float: left;
+			display: block;
+			padding: 0 fluidity(10px, 800px);
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:hover, &.active {
+
+				& > a { color: $fair; }
+
+			}
+
+			&:hover {
+				
+				&#link-shows, &#link-connect { background: url(../img/menu-pointer.png) center bottom no-repeat; }
+
+				& > ul { display: block; }
+			}
+
+			& > a {
+				position: relative;
+				display: block;
+				height: 40px;
+				@include use-font($default, $px12, normal, 700);
+				color: $orange;
+				line-height: 40px;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				.drop-shows {
+					position: absolute;
+					right: 20px;
+					top: 0;
+					margin: 0;
+					padding: 0;
+					display: none;
+					width: 18px;
+					height: 40px;
+					background: url(../img/icons/icon-collapse-small.png) center center no-repeat;
+					cursor: pointer;
+
+					&.collapsed {
+						background: url(../img/icons/icon-uncollapse-small.png) center center no-repeat;
+					}
+				}
+			}
+
+			> ul {
+				position: absolute;
+				left: 0;
+				display: none;
+				min-width: 230px;
+				margin: 0;
+				padding: 0;
+				background-color: $dark-grey;
+
+				& > li {
+					display: block;
+					margin-bottom: 15px;
+					padding: 0;
+					width: 100%;
+					visibility: hidden;
+
+					&:first-child {
+						margin-top: 15px;
+					}
+				}
+
+				a {
+					display: block;
+					padding: 0 20px;
+					width: 100%;
+					height: auto;
+					@include use-font($default, $px12, normal, bold);
+					color: $fair;
+					text-decoration: none;
+					text-transform: uppercase;
+					white-space: nowrap;
+
+					&:hover {
+						color: $light-grey;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+}

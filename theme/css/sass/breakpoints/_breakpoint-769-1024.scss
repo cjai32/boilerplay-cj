@@ -1,0 +1,481 @@
+// PROMOS
+.promos {
+
+	ul {
+		li {
+			width: fluidity(($small-block - 1), $break-1024);
+		}
+	}
+
+}
+
+// EVENTS
+.events {
+
+	ul {
+		li {
+			width: fluidity(($small-block - 1), $break-1024);
+
+			&.featured {
+				width: fluidity(($large-block - 1), $break-1024);
+			}
+		}
+	}
+	
+}
+
+// MEMES
+.memes {
+
+	ul {
+		li {
+			width: fluidity(($small-block - 1), $break-1024);
+		}
+	}
+
+}
+
+// CONTENT LISTS
+.content-lists {
+
+	.title-pane {
+		h1 {
+			@include use-font($museo-sans, $px30, normal, 100);
+		}
+	}
+
+}
+
+// LISTS
+.lists {
+
+	.container-1024 {
+		width: fluidity(($break-768 - 40px), $break-768);
+	}
+
+	&.quiz {
+
+		h2 {}
+
+		ul {
+
+			li {
+
+				h1 {}
+
+				li {}
+
+				a {}
+
+				span {
+
+					&:first-child {
+						margin-right: fluidity(10px, $break-768);
+
+						& + span {
+							width: fluidity(($break-768 - 40px), $break-768);
+						}
+					}
+
+				}
+
+				.image {
+					width: fluidity(338px, ($break-768 - 40px));
+				}
+
+				.description {
+					padding: 0 fluidity(10px, ($break-768 - 40px));
+					width: fluidity(390px, ($break-768 - 40px));
+				}
+
+			}
+
+			&.media {
+				li {
+					width: 100%;
+				}
+			}
+
+		}
+
+		.progress {
+			margin: 20px 0;
+		}
+
+		.current {}
+
+		.complete {
+			margin-bottom: 10px;
+			width: 100%;
+
+			& > div {
+				background-color: transparent;
+			}
+
+			& > p {
+				margin: 0 auto;
+				width: fluidity(($break-768 - 40px), $break-768);
+			}
+
+			.title-pane {
+				padding: 0 fluidity(20px, $break-768);
+
+				a {
+					h1, span {}
+
+					span {
+						position: relative;
+						right: auto;
+						bottom: auto;
+						margin-top: 20px;
+						text-align: left;
+					}
+				}
+
+			}
+			
+			.hero-image {
+				display: block;
+				margin: 0 auto;
+				width: fluidity(($break-768 - 40px), $break-768);
+			}
+
+			.result {
+				position: relative;
+				right: auto;
+				top: auto;
+				display: inline-block;
+				width: 100%;
+				background-color: $grey;
+				vertical-align: top;
+
+				h2 {
+					padding: 0 fluidity(20px, $break-768);
+				}
+
+				h1 {
+					margin-bottom: 20px;
+					padding: 0 fluidity(20px, $break-768);
+				}
+
+				a {}
+
+				.position-bottom {
+					position: relative;
+					bottom: auto;
+				}
+
+				.links {
+					padding: 20px fluidity(20px, $break-768);
+					text-align: left;
+
+					a {
+						text-align: right;
+						&:first-child { text-align: left; }
+					}
+				}
+
+				.share {
+					padding: 30px fluidity(20px, $break-768);
+				}
+
+			}
+
+		}
+
+		&.completed {
+			.complete {}
+		}
+
+	}	
+}
+
+// ARTICLES
+.articles {
+
+	.container-1024 {
+		width: 100%;
+	}
+
+	& > div {
+
+		& > div {
+			background-color: transparent;
+
+			h2 {}
+
+			p {
+				&.period {}
+			}
+
+			ol {
+				margin: 0 fluidity(30px, $break-1024) 40px;
+			}
+
+			li {
+				&:first-child { margin-top: 0; }
+			}
+
+			.link-how {
+				&:hover {}
+			}
+
+			&.content {
+				margin: 0 auto;
+				padding: 20px fluidity(20px, $break-1024);
+				width: fluidity($large-block, $break-1024);
+			}
+		}
+		
+		.hero-image {
+			margin: 0 auto;
+			width: fluidity($large-block, $break-1024);
+		}
+
+		.aside {
+			position: relative;
+			right: auto;
+			top: auto;
+			width: 100%;
+			background-color: $grey;
+
+			h2 {
+				padding: 20px fluidity(20px, $break-1024) 0;
+			}
+
+			h1 {
+				padding: 0 fluidity(20px, $break-1024);
+			}
+
+			p {
+				padding: 0 fluidity(20px, $break-1024);
+			}
+
+			.position-bottom {
+				position: relative;
+				bottom: auto;
+				margin-top: 30px;
+			}
+
+			.links {
+				padding: 30px fluidity(20px, $break-1024);
+
+				a {
+					&:first-child {}
+				}
+			}
+
+			.share {}
+
+		}
+
+	}
+
+}
+
+// OTHERS
+.others {
+
+	.container-1024 {
+		width: fluidity(($break-1024 - 40px), $break-1024);
+	}
+
+	ul {
+		text-align: center;
+
+		li {
+			width: fluidity(338px, ($break-1024 - 40px));
+			&:nth-child(5) {  
+				display: none;
+			}
+		}
+	}
+
+	.title-pane {
+		float: none;
+		margin-bottom: 40px;
+		padding: 0;
+		width: 100%;
+
+		a {
+
+			h1 {
+				margin-bottom: 10px;
+			}
+
+			h1, span {}
+
+			&:hover {
+				h1, span {}
+			}
+		}
+
+		.container {
+			margin-top: 0;
+		}
+
+	}
+
+	.overlay { display: none; }
+
+	.details {
+		position: relative;
+		bottom: auto;
+
+		&:hover {
+			.title { text-decoration: underline; }
+		}
+
+		.container {
+			position: relative;
+			bottom: auto;
+			display: block;
+			vertical-align: baseline;
+			padding: 20px 0 30px;
+			color: $dark;
+		}
+	}
+
+	.image {}
+
+	.title, .byline {
+		padding: 0;
+	}
+
+}
+
+// EXCLUSIVES
+.exclusives {
+
+	.container-1024 {
+		width: fluidity(($break-1024 - 40px), $break-1024);
+	}
+
+	ul {
+		text-align: center;
+
+		li {
+			width: fluidity(226px, ($break-1024 - 40px));
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+	}
+
+	.title-pane {
+		margin-top: 10px;
+		margin-bottom: 30px;
+
+		a {
+
+			h1 {
+				margin-bottom: 10px;
+			}
+
+			span {
+				position: relative;
+				right: auto;
+				bottom: auto;
+				text-align: left;
+			}
+
+			&:hover {
+				h1, span {}
+			}
+		}
+
+		.container {}
+
+	}
+
+	.details, .go {
+		&:hover {
+			.title {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.icons {
+		margin: 0 fluidity(20px, 226px) 10px;
+	}
+
+	.image {}
+
+	.title {
+		padding: 0 fluidity(20px, 226px);
+	}
+
+	.byline {
+		padding: 0 fluidity(20px, 226px);
+	}
+
+	.go {
+		display: none;
+		height: 0;
+		visibility: hidden;
+
+		&:before {}
+
+		.container {}
+
+		.show, .icon-video-large {}
+
+		.icon-video-large {
+			width: fluidity(120px, 226px);
+		}
+		
+	}
+
+}
+
+// GENERATORS
+.generators {
+
+	input[type="submit"] {
+		margin-bottom: 20px;
+	}
+
+	#meme-generator {
+		margin-left: 0;
+	}
+
+	.canvas-container {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.customizer {
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+	}
+
+	.text-tools {
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		@include clearfix();
+
+		fieldset {
+			float: left;
+			padding: 0 20px;
+			width: 50%;
+
+			&.bottom-tool {
+				border-bottom: 0;
+			}
+		}
+
+		div {
+			margin-bottom: 10px;
+
+			& > label {
+				width: fluidity(80px, 444px);
+			}
+		}
+
+	}
+
+}

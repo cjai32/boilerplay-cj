@@ -1,0 +1,71 @@
+.carousel {
+	position: relative;
+	overflow: hidden;
+
+	& > ul {
+		position: relative;
+		@include clearfix();
+
+		li {}
+		
+		.item-group {
+			float: left;
+			display: block;
+			width: 100%;
+
+			li {
+				white-space : normal;
+			}
+		}
+
+	}
+}
+
+.carousel-pager {
+	display: none;
+	@include use-font($museo-sans, $px18, normal, 100);
+	color: $fair;
+	text-align: center;
+}
+
+.carousel-controls {
+	width: 100%;
+
+	a {
+		position: absolute;
+		top: 50%;
+		z-index: 100;
+
+		&.next { right: 0; }
+	}
+
+	&.controls-event {
+		margin-top: -25px;
+
+		a {
+			border-radius: 0;
+			padding: 0;
+			width: fluidity(170px, $desktop);
+			height: 50px;
+			text-decoration: none;
+			background-color: $fair;
+			background-color: rgba(255,255,255,0.5);
+
+			span {
+				display: inline-block;
+				margin-top: 4px;
+				margin-bottom: 4px;
+				margin-left: 10px;
+				text-indent: 10px;
+				@include clearfix();
+
+				&.icon-prev {
+					float: right;
+					margin-left: 0;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+}

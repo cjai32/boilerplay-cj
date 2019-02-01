@@ -1,0 +1,150 @@
+<div class="generators meme clear">
+	
+	<div class="container-1024 h-centered">
+		<h1 class="block-title">Meme Generator</h1>
+	</div>
+
+	<form id="meme-generator">
+
+		<div class="canvas-container">
+			
+			<canvas id="canvas" width="580" height="580">Sorry, canvas not supported.</canvas>
+			
+			<div class="generated-preview">
+				
+				<div class="generated-details">
+					<div>
+						<h2>Generated!</h2>
+						<p class="timestamp"></p>
+						<a href="meme.html">View my meme</a>
+						<a id="new" href="#">Create another meme</a>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="mobile-preview"></div>
+
+			<label class="buttons upload" for="upload">Select file to upload</label>
+ 			<input type="file" id="upload" name="upload" accept="image/*"/>
+
+ 			<label class="buttons upload mobile-item" for="mupload">Select file to upload</label>
+ 			<input type="file" id="mupload" name="mupload" accept="image/*"/>
+
+	 		<div class="image-tools">
+	 			<a href="#" class="icons icon-zin">Zoom In</a>
+	 			<a href="#" class="icons icon-zout">Zoom Out</a>
+	 			<a href="#" class="icons icon-fit">Fit To Canvas</a>
+	 		</div>
+
+		</div>
+
+		<div class="customizer">
+
+	 		<div class="text-tools">
+				
+	 			<fieldset class="top-tool">
+				
+					<div>
+	 					<label>Top Text</label>
+	 					<textarea id="toptext" name="toptext">(Insert Caption)</textarea>
+ 					</div>
+					
+					<div>
+						<label>Size</label>
+						<input type="range" id="topsize" name="topsize" min="36" max="92" value="36" />
+					</div>
+					
+					<div>
+						<label>Color</label>
+						<ul class="color-picker">
+							<li><a class="topcolor red" href="#" data-color="#ff0000">red</a></li>
+							<li><a class="topcolor blue" href="#" data-color="#0000ff">blue</a></li>
+							<li><a class="topcolor yellow" href="#" data-color="#ffff00">yellow</a></li>
+							<li><a class="topcolor green" href="#" data-color="#00a651">green</a></li>
+							<li><a class="topcolor orange" href="#" data-color="#f26522">orange</a></li>
+							<li><a class="topcolor violet" href="#" data-color="#662d91">violet</a></li>
+							<li><a class="topcolor brown" href="#" data-color="#603913">brown</a></li>
+							<li><a class="topcolor grey" href="#" data-color="#959595">grey</a></li>
+							<li><a class="topcolor white" href="#" data-color="#ffffff">white</a></li>
+							<li><a class="topcolor black" href="#" data-color="#000000">black</a></li>
+						</ul>
+						<input type="hidden" id="topcolor" name="topcolor" />
+					</div>
+					
+					<div>
+						<label>Stroke</label>
+						<ul class="color-picker">
+							<li><a class="topstroke red" href="#" data-color="#ff0000">red</a></li>
+							<li><a class="topstroke blue" href="#" data-color="#0000ff">blue</a></li>
+							<li><a class="topstroke yellow" href="#" data-color="#ffff00">yellow</a></li>
+							<li><a class="topstroke green" href="#" data-color="#00a651">green</a></li>
+							<li><a class="topstroke orange" href="#" data-color="#f26522">orange</a></li>
+							<li><a class="topstroke violet" href="#" data-color="#662d91">violet</a></li>
+							<li><a class="topstroke brown" href="#" data-color="#603913">brown</a></li>
+							<li><a class="topstroke grey" href="#" data-color="#959595">grey</a></li>
+							<li><a class="topstroke white" href="#" data-color="#ffffff">white</a></li>
+							<li><a class="topstroke black" href="#" data-color="#000000">black</a></li>
+						</ul>
+						<input type="hidden" id="topstroke" name="topstroke" />
+					</div>
+
+				</fieldset>
+
+				<fieldset class="bottom-tool">
+				
+					<div>
+	 					<label>Bottom Text</label>
+	 					<textarea id="bottomtext" name="bottomtext">(Insert Caption)</textarea>
+ 					</div>
+					
+					<div>
+						<label>Size</label>
+						<input type="range" id="bottomsize" name="bottomsize" min="36" max="92" value="36" />
+					</div>
+					
+					<div>
+						<label>Color</label>
+						<ul class="color-picker">
+							<li><a class="bottomcolor red" href="#" data-color="#ff0000">red</a></li>
+							<li><a class="bottomcolor blue" href="#" data-color="#0000ff">blue</a></li>
+							<li><a class="bottomcolor yellow" href="#" data-color="#ffff00">yellow</a></li>
+							<li><a class="bottomcolor green" href="#" data-color="#00a651">green</a></li>
+							<li><a class="bottomcolor orange" href="#" data-color="#f26522">orange</a></li>
+							<li><a class="bottomcolor violet" href="#" data-color="#662d91">violet</a></li>
+							<li><a class="bottomcolor brown" href="#" data-color="#603913">brown</a></li>
+							<li><a class="bottomcolor grey" href="#" data-color="#959595">grey</a></li>
+							<li><a class="bottomcolor white" href="#" data-color="#ffffff">white</a></li>
+							<li><a class="bottomcolor black" href="#" data-color="#000000">black</a></li>
+						</ul>
+						<input type="hidden" id="bottomcolor" name="bottomcolor" />
+					</div>
+					
+					<div>
+						<label>Stroke</label>
+						<ul class="color-picker">
+							<li><a class="bottomstroke red" href="#" data-color="#ff0000">red</a></li>
+							<li><a class="bottomstroke blue" href="#" data-color="#0000ff">blue</a></li>
+							<li><a class="bottomstroke yellow" href="#" data-color="#ffff00">yellow</a></li>
+							<li><a class="bottomstroke green" href="#" data-color="#00a651">green</a></li>
+							<li><a class="bottomstroke orange" href="#" data-color="#f26522">orange</a></li>
+							<li><a class="bottomstroke violet" href="#" data-color="#662d91">violet</a></li>
+							<li><a class="bottomstroke brown" href="#" data-color="#603913">brown</a></li>
+							<li><a class="bottomstroke grey" href="#" data-color="#959595">grey</a></li>
+							<li><a class="bottomstroke white" href="#" data-color="#ffffff">white</a></li>
+							<li><a class="bottomstroke black" href="#" data-color="#000000">black</a></li>
+						</ul>
+						<input type="hidden" id="bottomstroke" name="bottomstroke" />
+					</div>
+
+				</fieldset>
+
+			</div>
+
+			<input type="submit" class="buttons red disabled" id="generate" value="Generate!" disabled="disabled" />
+
+		</div>
+
+	</form>
+
+</div>

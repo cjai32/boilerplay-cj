@@ -1,0 +1,28 @@
+.ads {
+
+	&.wide {
+		background-color: $light-gray;
+
+		.ad-container {
+			margin: 0 auto;
+			padding: 10px 0;
+			width: fluidity(970px, $desktop);
+			text-align: center;
+		}
+
+	}
+
+	&.square {
+		background-color: $lighter-gray;
+
+		.ad-container {
+			margin: 0 auto;
+			padding: 10px;
+			width: fluidity(300px, $ads-square);
+			text-align: center;
+		}
+	}
+
+	&.margin-left { margin-left: fluidity(10px, 600px); }
+	
+}

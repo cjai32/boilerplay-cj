@@ -1,0 +1,41 @@
+.search {
+
+	form {
+		height: 40px;
+	}
+
+	input[type="text"] {
+		border: 0;
+		display: inline-block;
+		margin: 9px 5px 6px;
+		padding: 5px 10px;
+		width: 0;
+		@include use-font($default, $px12, normal, 700);
+		color: $fair;
+		background-color: $dark-grey;
+		vertical-align: top;
+
+		@include placeholder {
+			color: $fair;
+		}
+	}
+
+	input[type="submit"], .search-temp {
+		border: none;
+		display: inline-block;
+		margin: 13px 0 12px;
+		padding: 0;
+		height: 16px;
+		text-decoration: none;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		line-height: 0;
+		background-color: transparent;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+}

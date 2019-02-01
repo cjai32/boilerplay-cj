@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+
+    <head>
+
+        <!-- START: META -->
+        @@include('../includes/meta.html', {
+            "title": "EVENT | ABS-CBN ENTERTAINMENT",
+            "description": "Welcome to the official online playground of ABS-CBN where you can get the most legitimate, credible, and up-to-date source of comprehensive information and activities about Channel 2 Entertainment programs and celebrities.",
+            "author": "ABS-CBN",
+            "og_type": "website",
+            "og_image": "assets/img/logo.svg",
+            "og_url": "",
+            "og_site-name": "TV2 Connect"
+        })
+        <!-- END: META -->
+
+        <!-- START: STYLES -->
+        @@include('../includes/styles.html')
+        <!-- END: STYLES -->
+
+        <!-- START: SCRIPTS -->
+        @@include('../includes/scripts-top.html')
+        <!-- END: SCRIPTS -->
+
+    </head>
+
+    <body>
+
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- START: SOCIAL PLUGINS -->
+        @@include('../includes/social-plugins.html')
+        <!-- END: SOCIAL PLUGINS-->
+
+        <!-- START: HEADER -->
+        @@include('../partials/base/header.html')
+        <!-- END: HEADER -->
+
+        <!-- START: MAIN -->
+        <main class="main" role="main">
+            @@include('../data/event.html')
+        </main>
+        <!-- END: MAIN -->
+
+        <!-- START: FOOTER -->
+        @@include('../partials/base/footer.html')
+        <!-- END: FOOTER -->
+
+        <!-- START: SHARE - STICKY -->
+        @@include('../partials/blocks/share--sticky.html', {
+            "title": "TV2 CONNECT - ABS-CBN ENTERTAINMENT",
+            "link": "http://www.abs-cbn.com",
+            "text": "Check this exclusive scoop!",
+            "via": "ABSCBN"
+        })
+        <!-- END: SHARE - STICKY -->
+
+        <!-- START: SCRIPTS -->
+        @@include('../includes/scripts-bottom.html')
+        <!-- END: SCRIPTS -->
+
+    </body>
+
+</html>

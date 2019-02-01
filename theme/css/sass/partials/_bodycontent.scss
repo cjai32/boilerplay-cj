@@ -1,0 +1,45 @@
+.container-about-alex{
+    background: url(../img/bodyimg.png);
+   
+    height: 30rem;;
+    
+    background-size: cover;
+    text-align: center;
+
+    .container-about-alex__about-alex-txt{
+        max-width:35rem;
+        margin-left:8rem;
+        padding-top: 3rem;
+        text-align: center;
+
+        .container-about-alex_about-alex-txt--width-change{
+            padding: 0 60px 0 60px;
+        }
+    }
+}
+
+.fa-stack-1x {
+    color:white;
+}
+.icon-facebook {
+   color:#3b5998;
+}
+
+.icon-twitter {
+    color:#00aced;
+}
+
+.icon-gplus{
+    color:#dd4b39;
+}
+
+.video-container {
+    background-color:#910000;
+    color:$fair;
+    padding: 1rem 15rem 0 15rem;
+
+    p{
+        font-size: 14px;
+    }
+}
+

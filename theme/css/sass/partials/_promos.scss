@@ -1,0 +1,96 @@
+.promos {
+	padding: 5px 0 2px;
+	background-color: $fair;
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: fluidity($small-block, $container);
+			text-align: left;
+			overflow: hidden;
+			cursor: pointer;
+		}
+	}
+
+	.title-pane {
+		width: fluidity($small-block, $container);
+
+		a {
+			display: block;
+			text-align: right;
+			text-decoration: none;
+
+			h1, span {
+				display: block;
+				color: $green;
+			}
+
+			&:hover {
+				h1, span {
+					color: $lightiest-gray;
+				}
+			}
+		}
+
+		.container {
+			margin-top: 15%;
+			width: 100%;
+		}
+
+	}
+
+	.details {
+		position: absolute;
+		z-index: 2;
+		bottom: -100%;
+		padding: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: $fair;
+		text-decoration: none;
+
+		.container {
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+		}
+	}
+
+	.image {
+		position: relative;
+		z-index: 0;
+		width: 100%;
+	}
+
+	.title {
+		position: relative;
+		margin: 0 0 5px;
+		padding: 0 fluidity(20px, $small-block);
+		@include use-font($museo-sans, $px18, normal, 900);
+		text-transform: uppercase;
+	}
+
+	.excerpt {
+		position: relative;
+		display: block;
+		margin: 0 0 10px;
+		padding: 0 fluidity(20px, $small-block);
+		@include use-font($museo-sans, $px18, normal, 700);
+	}
+
+	.byline {
+		position: relative;
+		display: block;
+		margin: 0 0 5px;
+		padding: 0 fluidity(20px, $small-block);
+		@include use-font($museo-sans, $px12, normal, 700);
+	}
+
+}

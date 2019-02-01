@@ -1,0 +1,80 @@
+// CONTENT LISTS
+.content-lists {
+
+	.title-pane {
+		h1 {
+			@include use-font($museo-sans, $px44, normal, 100);
+		}
+	}
+
+}
+
+// LISTS
+.lists {
+
+	&.quiz {
+
+		.complete {
+
+			.result {
+
+				h2 {
+					@include use-font($museo-sans, $px14, normal, 300);
+				}
+
+				h1 {
+					@include use-font($museo-sans, $px30, normal, 900);
+					// word-break: break-all;
+					line-height: 30px;
+				}
+				
+			}
+
+		}
+
+	}
+
+}
+
+// GENERATORS
+.generators {
+
+	input[type="submit"] {
+		margin-bottom: 20px;
+	}
+
+	#meme-generator {
+		margin-left: 0;
+	}
+
+	.canvas-container {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.customizer {
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+	}
+
+	.text-tools {
+		margin: 0 auto;
+		padding: 0;
+		width: fluidity($container, $break-1140);
+		@include clearfix();
+
+		fieldset {
+			float: left;
+			padding: 0 20px;
+			width: 50%;
+
+			&.bottom-tool {
+				border-bottom: 0;
+			}
+		}
+
+	}
+
+}

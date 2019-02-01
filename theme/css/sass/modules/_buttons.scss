@@ -1,0 +1,58 @@
+// BUTTONS
+.buttons {
+	border-radius: 4px;
+	padding: 5px 20px;
+	@include use-font($museo-sans, $px20, normal, 900);
+	color: $fair;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	&.prev {
+		display: block;
+		float: left;
+	}
+
+	&.next {
+		display: block;
+		float: right;
+	}
+
+	&.red {
+		line-height: 36px;
+		background-color: $red;
+
+		&:hover {
+			background-color: $dark-red;
+		}
+	}
+
+	&.large {
+		font-size: $px30;
+	}
+
+	&.small {
+		line-height: 18px;
+		padding: 10px 15px;
+	}
+
+	&.upload {
+		padding-top: 210px;
+		width: 360px;
+		background: url(../img/icons/upload-default.png) center 0 no-repeat;
+		cursor: pointer;
+
+		&:hover {
+			background: url(../img/icons/upload-hover.png) center 0 no-repeat;
+		}
+	}
+
+	&.disabled {
+		color: $light-grey;
+		background-color: $light-gray;
+
+		&:hover {
+			background-color: $light-gray;
+		}
+	}
+	
+}

@@ -1,0 +1,94 @@
+.quizzes {
+	background-color: $green;
+
+	.left-pane {
+		float: left;
+		padding: 0;
+		min-height: 415px;
+		width: fluidity($small-pane, $desktop);
+		@include clearfix();
+
+		a {
+			float: right;
+			display: block;
+			text-decoration: none;
+			
+			h1 {
+				margin: 30px auto;
+				line-height: 48px;
+			}
+
+			&:hover {
+				h1, span {
+					color: $lightiest-gray;
+				}
+			}
+		}
+
+		.container {
+			margin-top: 100px;
+			padding-right: 35%;
+			width: fluidity(345px, $small-pane);
+		}
+
+	}
+
+	.right-pane {
+		float: right;
+		min-height: 415px;
+		width: fluidity($large-pane, $desktop);
+		background-color: $dark;
+		color: $fair;
+
+		h2, p {
+			margin: 0;
+		}
+
+		.align-left {
+			width: fluidity(450px, $large-pane);
+
+			&:first-child {
+				padding: 0 fluidity(15px, $large-pane);
+				width: fluidity(360px, $large-pane);				
+			}
+		}
+
+		.radial-image {
+			float: left;
+			border-radius: 340px;
+			display: block;
+			margin: 55px 0 0;
+			width: 100%;
+			padding: 10px;
+			background-color: $fair;
+		}
+
+		.hero-image {
+			border-radius: 340px;
+			overflow: hidden;
+		}
+
+		.sponsored {
+			margin-top: 70px;
+			@include use-font($museo-sans, $px11, normal, 300);
+
+			img {
+				display: inline;
+				vertical-align: middle;
+			}
+		}
+
+		.title {
+			margin: 20px 0;
+			width: 75%;
+			@include use-font($museo-sans, $px30, normal, 900);
+		}
+
+		.byline {
+			margin-bottom: 30px;
+			@include use-font($museo-sans, $px20, normal, 300);
+		}
+
+	}
+
+}

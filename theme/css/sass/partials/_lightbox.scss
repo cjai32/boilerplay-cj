@@ -1,0 +1,110 @@
+.lightbox {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 9999;
+	display: none;
+	visibility: hidden;
+
+	.generated {}
+
+	.top {
+		position: relative;
+		width: 100%;
+		background-color: $fair;
+	}
+
+	.details {
+		display: inline-block;
+		margin: 10px 0 0;
+		padding: 0 10px;
+		width: 100%;
+		height: 32px;
+		text-align: right;
+		vertical-align: top;
+
+		span {
+			display: block;
+			@include use-font($museo-sans, $px10, normal, 500);
+			color: $lightiest-gray;
+		}
+		
+		a {
+			display: inline-block;
+			@include use-font($museo-sans, $px12, normal, 500);
+			color: $gray;
+			text-decoration: none;
+			text-transform: uppercase;
+			vertical-align: bottom;
+
+			&:hover {
+				color: $green;
+				text-decoration: underline;
+			}
+
+			&#delete {
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+
+	}
+
+	.share {
+		position: absolute;
+		top: 0;
+		display: inline-block;
+		margin-right: 80px;
+		padding-left: 10px;
+		padding-top: 10px;
+		background-color: $fair;
+
+		& .sharing-holder {
+			padding-right: 10px;
+			& > div { background-color: $fair; }
+		}
+	}
+
+	#close {
+		position: absolute;
+		right: -15px;
+		top: 0;
+		z-index: 1;
+		display: block;
+		padding: 0 5px 4px;
+		@include use-font($museo-sans, $px18, normal, 500);
+		color: $dark;
+		text-decoration: none;
+		background-color: $fair;
+
+		&:active {
+			color: $dark;
+		}
+	}
+
+	.media {
+		padding: 10px;
+		width: 480px;
+		height: 480px;
+		background: $fair url(../img/loader.gif) center center no-repeat;
+		@include opacity(0);
+
+		& img {
+			@include opacity(0);			
+		}
+	}
+
+}
+
+.lightbox-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9998;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+	@include opacity(0);
+}

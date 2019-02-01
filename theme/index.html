@@ -1,0 +1,57 @@
+            <!-- START: POLL -->
+            <div class="polls clear">
+
+                <div class="left-pane">
+
+                    <div class="container">
+                        <h1 class="block-title">{sectiontitle}</h1>
+                        <span>{pollquestion}</span>
+                        {pollpid}
+                    </div>
+
+                </div>
+
+                <div class="right-pane">
+
+                    {pollimage}
+
+                    <div class="container outer">
+                        {polltotalvotes}
+                        <div class="container inner">
+                            <div class="overlay"></div>
+                            <ul>
+                                <loop loop_answers>
+                                <li>
+                                    <div>
+                                        <p class="question">{pollanswer}</p>
+                                        <p class="percentage">{pollpercentage}</p>
+                                    </div>
+                                    <a href="javascript:void(0);" class="buttons red small" onClick="pollVote({answerpid},{pollvotingoption});">Vote</a>
+                                </li>
+                                </loop loop_answers>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END: POLL -->
+            <!-- Poll Voting Script -->
+            <script type="text/javascript">
+            function pollVote(ans_pid){
+                var poll_pid = $('#pollpid').val();
+
+                $.ajax({
+                    url: 'http://staging-dev.abs-cbn.com/tvconnect/ajax/castVote.php',
+                    type: 'post',
+                    data: {poll_pid : poll_pid,ans_pid : ans_pid},
+                    dataType: 'json',
+                    success: function(result){
+                        if(result == 'casted'){
+                            location.reload();
+                        }
+                    }
+                });
+            }
+            </script>

@@ -1,0 +1,139 @@
+.articles {
+	padding-bottom: 5px;
+
+	& > div {
+
+		& > div {
+			position: relative;
+			background-color: $grey;
+			@include clearfix();
+
+			h2 {
+				margin: 0 0 20px;
+				padding: 0 0 5px;
+				@include use-font($museo-sans, $px20, normal, 900);
+				text-align: left;
+				text-transform: uppercase;
+				background: url(../img/trans-1x1-20.png) 0 bottom repeat-x;
+			}
+
+			p {
+				margin: 0 0 40px;
+				@include use-font($museo-sans, $px14, normal, 700);
+				text-align: left;
+				color: $dark;
+
+				&.period {
+					margin: 20px 0 10px;
+					@include use-font($museo-sans, $px14, normal, 500);
+					color: $light-gray;
+					text-align: center;
+				}
+			}
+
+			ol {
+				margin: 0 fluidity(30px, $container) 40px;
+				padding: 0;
+			}
+
+			li {
+				margin-top: 20px;
+				@include use-font($museo-sans, $px14, normal, 700);
+				text-align: left;
+
+				&:first-child { margin-top: 0; }
+			}
+
+			.link-how {
+				@include use-font($museo-sans, $px12, normal, 500);
+				color: $green;
+				text-transform: uppercase;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&.content {
+				padding: 20px fluidity(20px, $container);
+				width: fluidity($large-block, $container);
+				text-align: center;
+				background-color: $fair;
+				background-color: rgba(255, 255, 255, 0.8);
+			}
+		}
+		
+		.hero-image {
+			width: fluidity($large-block, $container);
+		}
+
+		.aside {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: fluidity(343px, $container);
+			height: 100%;
+
+			h2 {
+				padding: 20px fluidity(20px, 343px) 0;
+				@include use-font($museo-sans, $px20, normal, 300);
+				color: $dark-gray;
+				text-transform: uppercase;
+				background: none;
+			}
+
+			h1 {
+				padding: 0 fluidity(20px, 343px);
+				width: 100%;
+				@include use-font($museo-sans, $px30, normal, 900);
+				color: $dark-gray;
+				// word-break: break-all;
+				line-height: 28px;
+			}
+
+			p {
+				margin: 0;
+				padding: 0 fluidity(20px, 343px);
+				@include use-font($museo-sans, $px20, normal, 500);
+				color: $dark-gray;
+				text-transform: uppercase;
+			}
+
+			.position-bottom {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+
+			.links {
+				padding: 30px fluidity(20px, 343px);
+				width: 100%;
+				text-align: right;
+
+				a {
+					display: inline-block;
+					width: 49%;
+
+					&:first-child {
+						text-align: left;
+					}
+				}
+			}
+
+			.share {
+				padding: 30px fluidity(20px, 343px);
+
+				& .sharing-holder {
+					& > div {
+						padding-left: 10px;
+						width: 180px;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}

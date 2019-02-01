@@ -1,0 +1,360 @@
+.content-lists {
+
+	.selecter {
+		max-width: none;
+
+		.selecter-selected {
+			border: 0;
+			border-radius: 0;
+			padding: 0 44px 0 fluidity(20px, ($small-block + 20px));
+			display: inline-block;
+			@include use-font($museo-sans, $px20, normal, 100);
+			color: $fair;
+			text-transform: uppercase;
+			background: transparent url(../img/icons/icon-uncollapse.png) right center no-repeat;
+		}
+
+		&.open {
+			z-index: 9997;
+		}
+
+		&.closed {
+			.selecter-selected {
+				background: transparent url(../img/icons/icon-collapse.png) right center no-repeat;
+			}
+		}
+
+		.selecter-options {
+			border: 0;
+			border-radius: 0;
+			margin-top: 20px;
+			max-height: none;
+			background: $dark;
+			background: rgba(0, 0, 0, 0.5);
+		}
+
+		.selecter-item {
+			border: 0;
+			border-radius: 0;
+			padding: 0 20px 20px;
+			@include use-font($museo-sans, $px20, normal, 100);
+			color: $fair;
+			text-transform: uppercase;
+			background: none;
+
+			&.first { padding-top: 20px; }
+
+
+			&:hover {
+				text-decoration: underline;
+				background: none;	
+			}
+		}
+	}
+
+	.selecter-element {
+		position: relative;
+		left: auto;
+		height: 0;
+		visibility: hidden;
+	}
+
+	ul {
+		margin: 5px 0 0;
+		padding: 0;
+		@include clearfix();
+	}
+
+	li {
+		position: relative;
+		float: right;
+		display: block;
+		margin: 0 0 5px;
+		background-color: $grey;
+		@include opacity(0);
+
+		&:hover {
+			.title { text-decoration: underline; }
+		}
+
+		& > div {
+			position: relative;
+			display: inline-block;
+			display: -moz-inline-block;
+			-moz-box-orient: vertical;
+			vertical-align: middle;
+			overflow: hidden;
+			
+			img {
+				width: 100%;
+			}
+
+			&:first-child {}
+
+			.show {
+				display: block;
+				margin: 0 auto 20px;
+				width: 100%;
+				text-align: center;
+
+				img {
+					display: inline-block;
+					width: auto;
+				}
+			}
+
+			.begin {
+				position: absolute;
+				bottom: -100%;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+
+				& > div {
+					display: inline-block;
+					vertical-align: middle;
+
+					.show {
+						position: relative;
+						z-index: 1;
+					}
+				}
+			}
+
+			.title {
+				display: block;
+				margin-bottom: 10px;
+				@include use-font($museo-sans, $px18, normal, 700);
+				color: $dark-gray;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.byline {
+				margin: 0;
+			}
+
+			.buttons {
+				position: relative;
+				z-index: 1;
+			}
+
+		}
+
+	}
+
+	.title-pane {
+		margin-top: 50px;
+		
+		h1 {
+			display: block;
+			color: $fair;
+			text-transform: uppercase;
+		}
+
+		a {
+			display: block;
+			margin: 10px 0;
+			@include use-font($museo-sans, $px20, normal, 100);
+			color: $fair;
+			text-decoration: none;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.container {
+			margin-top: 15%;
+			width: 100%;
+		}
+
+		&.quiz-list-title {
+			margin-left: fluidity(-20px, $container);
+			width: fluidity(($small-block + 20px), $container);
+
+			h1 {
+				padding: 0 fluidity(20px, ($small-block + 20px));
+			}
+		}
+
+		&.event-list-title {
+			width: fluidity($small-block, $container);
+
+			h1 {
+				padding: 0 fluidity(20px, $small-block);
+			}
+		}
+
+		&.meme-list-title {
+			margin-right: fluidity(5px, $container);
+			width: fluidity($small-block, $container);
+
+			a {
+				&.active { text-decoration: underline; }
+
+				&.create {
+					@include use-font($museo-sans, $px12, normal, 100);
+					color: $dark-violet;
+					text-transform: capitalize;
+				}	
+		
+			}
+		}
+
+	}
+
+	.load-more {
+		text-align: center;
+
+		a {
+			display: block;
+			margin: 20px 0;
+			@include use-font($museo-sans, $px20, normal, 100);
+			color: $fair;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:hover { color: $grey; }
+		}
+	}
+
+	.one-column {
+		float: left;
+		margin-left: fluidity(4px, $container);
+		width: fluidity($small-block, $container);
+
+		&:first-child {
+			margin-left: 0;
+		}
+		
+		& > div {
+
+			.details {
+				position: absolute;
+				bottom: 0;
+				padding: 30px fluidity(20px, $small-block) 10px;
+				background: transparent url(../img/gradient-small.png) 0 bottom repeat-x;
+			}
+
+			.title, .byline { color: $fair; }
+
+			&:first-child {
+				width: 100%;	
+			}
+			
+		}
+
+		&.large {
+			width: fluidity($large-block, $container);
+
+			> div {
+
+				&:first-child {
+					float: none;
+					margin-right: fluidity(-4px, $container);
+				}
+			}
+
+		}
+
+		&.clear {
+			clear: both;
+			margin-left: 0;
+			margin-right: fluidity(5px, $container);
+		}
+
+		&.reversed {
+			float: right;
+		}
+
+		&.no-margin {
+			margin: 0;
+		}
+
+		&.no-left {
+			margin-left: 0;
+		}
+
+		&.less-bottom {
+			margin-bottom: 2px;
+		}
+
+	}
+
+	.two-column {
+		width: fluidity($large-block, $container);
+
+		& > div {
+			margin-right: fluidity(-4px, $large-block);
+			width: fluidity(343px, $large-block);
+
+			&:first-child {
+				width: fluidity($small-block, $large-block);
+			}
+		}
+
+		.details {
+			padding: 0 fluidity(20px, 343px);
+		}
+
+		&.large {
+			width: 100%;
+
+			& > div {
+				float: none;
+				margin-right: fluidity(-4px, $container);
+				width: fluidity($large-block, $container);
+
+				&:first-child {
+					width: fluidity(343px, $container);
+					vertical-align: middle;
+				}
+			}
+
+			.details {
+				padding: 0 fluidity(20px, 343px);
+			}
+		}
+
+		&.reversed {
+			float: left;
+			
+			&.large {
+				& > div {
+					width: fluidity(343px, $container);
+
+					&:first-child {
+						width: fluidity($large-block, $container);
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	// Specifically for Meme Page
+
+	&.meme-list {
+		li {
+			.overlay { @include opacity(0); }
+		}
+	}
+
+	.pure-one-column {}
+
+}

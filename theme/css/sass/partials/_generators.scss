@@ -1,0 +1,265 @@
+.generators {
+	background-color: $gray;
+	@include clearfix();
+
+	h1 {
+		margin: 20px 0;
+	}
+
+	input[type="submit"] {
+		border: 0;
+	}
+
+	input[type="file"] {
+		position: absolute;
+		left: -9999px;
+	}
+
+	.generated-preview {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		.generated-details {
+			display: table-cell;
+			vertical-align: middle;
+
+			& div {
+				position: relative;
+				left: 50%;
+				z-index: 1;
+				float: left;
+				margin-left: -30%;
+				padding: 20px;
+				width: 60%;
+				background: rgba(255, 255, 255, 0.95);
+				-webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+				-moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+				box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+				@include clearfix();
+			}
+		}
+
+		h2 {
+			margin: 0;
+			@include use-font($museo-sans, $px50, normal, 900);
+			color: $green;
+			text-transform: uppercase;
+		}
+
+		p {
+			margin: 0;
+			@include use-font($museo-sans, $px12, normal, 500);
+			color: $lightiest-gray;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		a {
+			float: left;
+			display: inline-block;
+			margin-top: 40px;
+			@include use-font($museo-sans, $px12, normal, 500);
+			color: $gray;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $green;
+				text-decoration: underline;
+			}
+
+			&#new {
+				float: right;
+			}
+		}
+	}
+
+	.mobile-preview {
+		display: none;
+		width: 100%;
+		@include opacity(0);
+	}
+
+	#meme-generator {
+		margin-left: fluidity(128px, $desktop);
+		@include clearfix();
+	}
+
+	.canvas-container {
+		position: relative;
+		float: left;
+		width: 580px;
+		height: 580px;
+		overflow: hidden;
+		@include clearfix();
+	}
+	
+	#canvas {
+		float: left;
+		display: block;
+		background-color: $dark-gray;
+	}
+
+	.customizer {
+		float: left;
+		width: 442px;
+		height: 580px;
+		text-align: center;
+		background-color: $dark;
+	}
+
+	.upload {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		display: block;
+		margin-left: -180px;
+		margin-top: -100px;
+		text-align: center;
+
+		&.mobile-item {
+			display: none;
+		}
+	}
+
+	.image-tools {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: none;
+		z-index: 0;
+		@include clearfix();
+
+		a {
+			float: left;
+			@include use-font($museo-sans, $px14, normal, 500);
+			color: $fair;		
+			text-decoration: none;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+
+			&.icon-fit {
+				clear: both;
+			}
+		}
+	}
+
+	.text-tools {
+		padding: 0 fluidity(20px, 444px);
+
+		fieldset {
+			border: 0;
+			margin: 15px 0 0;
+			padding: 0;
+			text-align: left;
+
+			&.bottom-tool {
+				border-bottom: 1px solid $gray;
+				margin-bottom: 20px;
+			}
+		}
+
+		div {
+			margin-bottom: 10px;
+
+			&:first-child {
+				label {
+					width: 100%;
+					@include use-font($museo-sans, $px18, normal, 900);
+					text-transform: uppercase;
+				}
+			}
+
+			& > label {
+				display: inline-block;
+				width: fluidity(50px, 444px);
+				@include use-font($museo-sans, $px14, normal, 500);
+				color: $fair;
+				vertical-align: middle;
+			}
+
+			& > textarea {
+				display: block;
+				margin-top: 10px;
+				padding: 5px;
+				width: 100%;
+				resize: none;
+			}
+
+			& > ul {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				width: fluidity(300px, 424px);
+				font-size: 0;
+				vertical-align: middle;
+
+				li {
+					border-top: 4px solid $gray;
+					border-bottom: 4px solid $gray;
+					display: inline-block;
+					width: fluidity(30px, 300px);
+					height: 30px;
+					overflow: hidden;
+					&:first-child {
+						border-left: 4px solid $gray;
+					}
+					&:last-child {
+						border-right: 4px solid $gray;
+					}
+				}
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					text-decoration: none;
+					text-indent: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					cursor: pointer;
+					
+					&.red { background-color: #ff0000; }
+					&.blue { background-color: #0000ff; }
+					&.yellow { background-color: #ffff00; }
+					&.green { background-color: #00a651; }
+					&.orange { background-color: #f26522; }
+					&.violet { background-color: #662d91; }
+					&.brown { background-color: #603913; }
+					&.grey { background-color: #959595; }
+					&.white { background-color: #ffffff; }
+					&.black { background-color: #000000; }
+				}
+
+			}
+
+		}
+
+	}
+
+	.rangeslider {
+		margin: 10px 0 20px !important;
+		height: 10px;
+	}
+
+	.rangeslider__fill {
+		height: 10px;
+		background: $light-gray;
+	}
+
+	.rangeslider__handle {
+		top: -5px;
+		width: 20px;
+		height: 20px;
+	}
+
+	&.meme {}
+	
+}

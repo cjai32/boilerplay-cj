@@ -1,0 +1,117 @@
+.polls {
+	position: relative;
+	background-color: $dark;
+	color: $fair;
+	
+	.left-pane {
+		float: left;
+		width: fluidity($small-pane, $desktop);
+		@include clearfix();
+
+		h1 {
+			margin-bottom: 30px;
+			width: 90%;
+		}
+
+		span {
+			display: block;
+			width: 90%;
+			@include use-font($museo-sans, $px20, normal, 300);
+		}
+
+		.container {
+			float: right;
+			margin-top: 40px;
+			width: fluidity(345px, $small-pane);
+		}
+			
+	}
+
+	.right-pane {
+		float: right;
+		width: fluidity($large-pane, $desktop);
+		overflow: hidden;
+
+		ul {
+			position: relative;
+			z-index: 1;
+			margin: 0;
+			padding: 0;
+			width: fluidity($large-block, $large-pane);
+
+			li {
+				border-top: 1px solid $fair;
+				margin: 0 0 0 fluidity(20px, $large-pane);
+				padding: 15px 0;
+				display: block;
+				@include clearfix();
+
+				&:first-child { border-top: none; }
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.bg {
+			margin: 5px 0 6px;
+			max-width: none;
+		}
+
+		.container {
+			@include clearfix();
+
+			&.outer {
+				position: absolute;
+				bottom: 5px;
+			}
+
+			&.inner {
+				position: relative;
+				float: left;
+				overflow: hidden;
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $dark;
+			@include opacity(0.5);
+		}
+
+		.total {
+			margin-bottom: 20px;
+			width: fluidity($large-block, $large-pane);
+			@include use-font($museo-sans, $px14, normal, 900);
+			text-align: right;
+			text-transform: uppercase;
+		}
+
+		.question {
+			float: left;
+			width: fluidity(550px, $large-pane);
+			@include use-font($museo-sans, $px14, normal, 500);
+		}
+
+		.percentage {
+			float: left;
+			padding: 0 fluidity(10px,$large-pane);
+			width: fluidity(120px, $large-pane);
+			@include use-font($museo-sans, $px20, normal, 900);
+			line-height: 36px;
+			text-align: right;
+		}
+
+		.buttons {
+			float: right;
+		}
+
+	}
+	
+}

@@ -1,0 +1,84 @@
+footer {
+    width: 100%;
+    background: $lightier-gray;
+    @include clearfix();
+
+    a {
+    	padding: 0 10px;
+		color: #444;
+		text-decoration: none;
+    }
+    
+    .left-pane {
+        margin: 45px 0;
+        
+    }
+
+    .right-pane {
+        margin: 55px 0;
+        width: fluidity(674px, $container);
+        text-align: right;
+
+        .ads {
+            float: right;
+            margin-left: fluidity(20px, $container);
+            width: fluidity(320px, 674px);
+        }
+    }
+
+    .footer-branding {
+        background: url(../img/footer-branding.png) 0 0 no-repeat;
+        @include clearfix();
+
+        .align-left {
+            width: fluidity(340px, $desktop);
+        }
+
+        .align-right {
+            width: fluidity(940px, $desktop);   
+        }
+    }
+
+    .contact {
+        margin-top: 35px;
+        width: 49%;
+
+        p {
+            margin: 0;
+            @include use-font($museo-sans, $px12, normal, 500);
+            line-height: 21px;
+        }
+    }
+
+    .copyright {
+        padding: 0 fluidity(20px, $desktop);
+        background-color: $dark-violet;
+        color: $fair;
+        @include clearfix();
+
+        p {
+            margin: 0;
+            @include use-font($museo-sans, $px12, normal, 300);
+            text-align: center;
+            line-height: 50px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 49px;
+
+            li {
+                display: inline;
+
+                a {
+                    @include use-font($museo-sans, $px12, normal, 300);
+                    color: $fair;
+
+                    &:hover { color: $green; }
+                }
+            }
+        }
+    }
+}

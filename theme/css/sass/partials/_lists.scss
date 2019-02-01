@@ -1,0 +1,271 @@
+.lists {
+
+	&.quiz {
+
+		h2 {
+			margin-top: 40px;
+			padding-bottom: 10px;
+			@include use-font($museo-sans, $px20, normal, 900);
+			text-transform: none;
+			background: url(../img/trans-1x1-20.png) 0 bottom repeat-x;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: block;
+
+				h1 {
+					margin-bottom: 40px;
+					@include use-font($museo-sans, $px30, normal, 900);
+					color: $fair;
+				}
+
+				li {
+					display: block;
+					margin-bottom: 40px;
+				}
+
+				a {
+					text-decoration: none;
+					cursor: pointer;
+
+					&.active {
+						& > .icon-option {
+							@include sprite($icon-option-active);
+						}
+						& > .overlay {
+							@include opacity(0.5);
+						}
+					}
+				}
+
+				span {
+
+					&:first-child {
+						display: inline-block;
+						margin-right: fluidity(10px, $container);
+						vertical-align: middle;
+
+						& + span {
+							display: inline-block;
+							margin-top: 2px;
+							width: fluidity(980px, $container);
+							@include use-font($museo-sans, $px14, normal, 500);
+							color: $fair;
+							vertical-align: middle;
+						}
+					}
+
+				}
+
+				&.active {}
+
+				.image {
+					position: relative;
+					display: table-cell;
+					width: fluidity($small-block, $container);
+					height: 100%;
+					vertical-align: middle;
+					overflow: hidden;
+
+					img { width: 100%; }
+				}
+
+				.description {
+					display: table-cell;
+					padding: 0 10px;
+					width: fluidity(343px, $container);
+					height: 100%;
+					@include use-font($museo-sans, $px14, normal, 700);
+					color: $dark;
+					vertical-align: middle;
+
+					&:hover { text-decoration: underline; }
+				}
+
+				.overlay {
+					top: 0;
+					@include opacity(0);
+				}
+
+			}
+
+			&.media {
+				@include clearfix();
+					
+				li {
+					margin-bottom: 5px;
+					width: fluidity($large-block, $container);
+					background-color: $grey;
+					@include clearfix();
+
+					&.odd {
+						float: left;
+					}
+
+					&.even {
+						float: right;
+					}
+
+					&:hover {
+						.description { text-decoration: underline; }
+					}
+
+				}
+				
+			}
+
+		}
+
+		.progress {
+			margin-bottom: 40px;
+			
+			span {
+				@include use-font($museo-sans, $px14, normal, 500);
+				color: $fair;
+			}
+
+		}
+
+		.current {}
+
+		.complete {
+			display: none;
+			margin-bottom: 40px;
+
+			& > div {
+				position: relative;
+				background-color: $grey;
+				@include clearfix();
+			}
+
+			& > p {
+				margin: 0;
+				padding: 20px;
+				background-color: $fair;
+				background-color: rgba(255, 255, 255, 0.8);
+				@include use-font($museo-sans, $px14, normal, 700);
+				color: $dark;
+			}
+
+			.title-pane {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				background: none;
+
+				h1 { color: $fair; }
+
+				a {
+					position: relative;
+					display: block;
+					text-align: left;
+					text-decoration: none;
+					@include clearfix();
+
+					span {
+						position: absolute;
+						right: 0;
+						bottom: 0.5em;
+						display: block;
+						width: 100%;
+						color: $fair;
+						text-align: right;
+					}
+
+					&:hover {
+						span {
+							color: $lightiest-gray;
+						}
+					}
+				}
+
+				.container {
+					width: 100%;
+				}
+
+			}
+			
+			.hero-image {
+				width: fluidity($large-block, $container);
+			}
+
+			.result {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: fluidity(343px, $container);
+				height: 100%;
+
+				h2 {
+					padding: 0 fluidity(20px, 343px);
+					@include use-font($museo-sans, $px20, normal, 300);
+					color: $dark-gray;
+					background: none;
+				}
+
+				h1 {
+					margin-bottom: 100px;
+					padding: 0 fluidity(20px, 343px);
+					width: 100%;
+					@include use-font($museo-sans, $px50, normal, 900);
+					color: $dark-gray;
+					text-transform: uppercase;
+					// word-break: break-all;
+					line-height: 48px;
+				}
+
+				a {
+					@include use-font($museo-sans, $px14, normal, 500);
+					color: $green;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+				.position-bottom {
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+				}
+
+				.links {
+					padding: 30px fluidity(20px, 343px);
+					width: 100%;
+					text-align: right;
+
+					a {
+						display: inline-block;
+						width: 49%;
+
+						&:first-child {
+							text-align: left;
+						}
+					}
+				}
+
+				.share {
+					padding: 30px fluidity(20px, 343px);
+
+					& .sharing-holder {
+						& > div {
+							padding-left: 10px;
+							width: 180px;
+						}
+					}
+				}
+
+			}
+
+		}
+
+		&.completed {
+			.complete { display: block; }
+		}
+
+	}	
+}

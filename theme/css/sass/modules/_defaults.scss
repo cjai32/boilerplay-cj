@@ -1,0 +1,26 @@
+// GLOBALS
+* {
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	@include vendor(box-sizing, border-box);
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	background: $fair;
+	color: $gray;
+	@include use-font();
+
+	&.enable-grid {
+		background: $fair url(../img/grid-1280px-11col-20gut.png);
+		background-size: 100%;
+	}
+	
+}

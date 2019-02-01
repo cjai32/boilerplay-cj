@@ -1,0 +1,75 @@
+// WIDTH
+$desktop: 1280px;
+
+$container: 1024px;
+$small-container: 256px;
+
+$small-block: 338px;
+$large-block: 681px;
+
+$small-pane: 470px;
+$large-pane: 810px;
+
+$ads-square: 300px;
+
+// BREAKPOINTS
+$break-1280: 1280px;
+$break-1140: 1140px;
+$break-1024: 1024px;
+$break-568: 568px;
+$break-640: 640px;
+$break-768: 768px;
+$break-728: 728px;
+$break-480: 480px;
+$break-320: 320px;
+
+// GRID WIDTH(S)
+$col: 116px;
+$grid1: $col;
+$grid2: $col * 2;
+$grid3: $col * 3;
+$grid4: $col * 4;
+$grid5: $col * 5;
+$grid6: $col * 6;
+$grid7: $col * 7;
+$grid8: $col * 8;
+$grid9: $col * 9;
+$grid10: $col * 10;
+$grid11: $col * 11;
+
+// FONTS
+$default: "Monstserrat";
+$museo-sans: "museo-sans";
+$gotham-black: "Gotham Black";
+$gotham-medium: "Gotham Medium";
+
+// FONT SIZES
+$px10: 0.625em;
+$px11: 0.688em;
+$px12: 0.750em;
+$px14: 0.875em;
+$px18: 1.125em;
+$px20: 1.250em;
+$px30: 1.875em;
+$px44: 2.750em;
+$px50: 3.125em;
+
+//COLORS
+$fair: #FFF;
+$dark: #000;
+$dark-grey: #C2C2C2;
+$grey: #E1E1E1;
+$light-grey: #707070;
+$gray: #363636;
+$light-gray: #959595;
+$lighter-gray: #CCC;
+$lightier-gray: #EBEBEB;
+$lightiest-gray: #BFBFBF;
+$dark-gray: #252525;
+$dark-violet: #540045;
+$light-violet: #50257E;
+$green: #2E978C;
+$red: #F21237;
+$dark-red: #BE102D;
+$orange: #dc8706;
+$lighter-dark: #1f1f1f;

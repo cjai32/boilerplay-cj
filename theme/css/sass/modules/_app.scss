@@ -1,0 +1,251 @@
+// RESPONSIVE IMAGE
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	&.responsive-image {
+		position: absolute;
+		max-width: 80%;
+		max-height: 80%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+// CONTAINERS / GRIDS
+// @include grid(1280px, 11, 0px, ".grid-", ".row");
+.container-1024 {
+	width: fluidity($container, $desktop);
+}
+
+// FLOATS
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
+.align-none {
+	float: none;
+}
+
+// INLINE BLOCK (FLOATS ALTERNATIVE)
+.align-inline {
+  display: inline-block;
+  display: -moz-inline-block;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+}
+
+// CENTERING (HORIZONTAL)
+.h-centered {
+	position: relative;
+	float: none;
+	margin: 0 auto;
+}
+
+// CENTERING (VERTICAL)
+.v-centered:after {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// ICONS
+.icons {
+	display: block;
+
+	&.login {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		background: url(../img/icons/login.png) center center no-repeat;
+	}
+
+	&.universal {
+		width: 84px;
+		height: 35px;
+		line-height: 35px;
+		background: url(../img/icons/universal.png) center center no-repeat;
+	}
+
+	&.icon-menu {
+		@include sprite($icon-menu);
+	}
+
+	&.icon-search {
+		@include sprite($icon-search);
+	}
+
+	&.icon-fb {
+		@include sprite($icon-fb);
+	}
+
+	&.icon-twt {
+		@include sprite($icon-twt);
+	}
+
+	&.icon-yt {
+		@include sprite($icon-yt);
+	}
+
+	&.icon-video {
+		@include sprite($icon-video);
+	}
+
+	&.icon-prev {
+		@include sprite($icon-prev);
+
+		&:hover {
+			@include sprite($icon-prev-hover);
+		}
+	}
+
+	&.icon-next {
+		@include sprite($icon-next);
+
+		&:hover {
+			@include sprite($icon-next-hover);
+		}
+	}
+
+	&.icon-option {
+		@include sprite($icon-option);
+	}
+
+	&.icon-fb-share {
+		@include sprite($icon-fb-share);
+
+		&:hover {
+			@include sprite($icon-fb-share-hover);			
+		}
+	}
+
+	&.icon-twt-share {
+		@include sprite($icon-twt-share);
+
+		&:hover {
+			@include sprite($icon-twt-share-hover);			
+		}
+	}
+
+	&.icon-gplus-share {
+		@include sprite($icon-gplus-share);
+
+		&:hover {
+			@include sprite($icon-gplus-share-hover);			
+		}
+	}
+
+	&.icon-pin-share {
+		@include sprite($icon-pin-share);
+
+		&:hover {
+			@include sprite($icon-pin-share-hover);			
+		}
+	}
+
+	&.icon-in-share {
+		@include sprite($icon-in-share);
+
+		&:hover {
+			@include sprite($icon-in-share-hover);			
+		}
+	}
+
+	&.icon-rss-share {
+		@include sprite($icon-rss-share);
+
+		&:hover {
+			@include sprite($icon-rss-share-hover);			
+		}
+	}
+
+	&.icon-print-share {
+		@include sprite($icon-print-share);
+
+		&:hover {
+			@include sprite($icon-print-share-hover);			
+		}
+	}
+
+	&.icon-email-share {
+		@include sprite($icon-email-share);
+
+		&:hover {
+			@include sprite($icon-email-share-hover);			
+		}
+	}
+
+	&.icon-zin {
+		@include sprite($icon-zoomin);
+
+		&:hover {
+			@include sprite($icon-zoomin-hover);			
+		}
+	}
+
+	&.icon-zout {
+		@include sprite($icon-zoomout);
+
+		&:hover {
+			@include sprite($icon-zoomout-hover);			
+		}
+	}
+
+	&.icon-fit {
+		@include sprite($icon-fit);
+
+		&:hover {
+			@include sprite($icon-fit-hover);			
+		}
+	}
+
+}
+
+// BLOCK PARTS
+.block-title {
+	margin: 0;
+	@include use-font($museo-sans, $px50, normal, 100);
+	color: $fair;
+	text-transform: uppercase;
+}
+
+.block-link {
+	color: $fair;
+	@include use-font($museo-sans, $px20, normal, 100);
+	text-indent: 4px;
+}
+
+// OVERLAY
+.overlay {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 200%;
+	width: 100%;
+	height: 200%;
+	background-color: $dark;
+	@include opacity(0.5);
+}
+
+// GRADIENT
+.gradient-green-violet {
+	background: rgba(46,150,140,1);
+	background: -moz-linear-gradient(left, rgba(46,150,140,1) 0%, rgba(80,38,126,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(46,150,140,1)), color-stop(100%, rgba(80,38,126,1)));
+	background: -webkit-linear-gradient(left, rgba(46,150,140,1) 0%, rgba(80,38,126,1) 100%);
+	background: -o-linear-gradient(left, rgba(46,150,140,1) 0%, rgba(80,38,126,1) 100%);
+	background: -ms-linear-gradient(left, rgba(46,150,140,1) 0%, rgba(80,38,126,1) 100%);
+	background: linear-gradient(to right, rgba(46,150,140,1) 0%, rgba(80,38,126,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e968c', endColorstr='#50267e', GradientType=1 );
+}

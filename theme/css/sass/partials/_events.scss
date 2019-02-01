@@ -1,0 +1,129 @@
+.events {
+	position: relative;
+	padding-bottom: 40px;
+	@include clearfix();
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: fluidity($small-block, $container);
+			text-align: left;
+			overflow: hidden;
+			cursor: pointer;
+
+			&.featured {
+				float: right;
+				margin-right: fluidity(1px, $container);
+				width: fluidity($large-block, $container);
+
+				.details {
+					&:before {
+						content: "";
+						display: inline-block;
+						height: 100%;
+						vertical-align: middle;
+					}
+					.container {
+						position: relative;
+						bottom: auto;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+
+				.title {
+					@include use-font($museo-sans, $px30, normal, 900);
+				}
+
+				.excerpt {
+					@include use-font($museo-sans, $px20, normal, 700);
+				}
+
+				.byline {
+					@include use-font($museo-sans, $px20, normal, 700);
+				}
+			}
+		}
+	}
+
+	.title-pane {
+		margin-top: 30px;
+		margin-bottom: 10px;
+
+		a {
+			position: relative;
+			display: block;
+			text-align: left;
+			text-decoration: none;
+			@include clearfix();
+			
+			span {
+				position: absolute;
+				right: 0;
+				bottom: 0.5em;
+				display: block;
+				width: 100%;
+				color: $fair;
+				text-align: right;
+			}
+
+			&:hover {
+				span {
+					color: $lightiest-gray;
+				}
+			}
+		}
+
+		.container {
+			width: 100%;
+		}
+
+	}
+
+	.details {
+		position: absolute;
+		z-index: 2;
+		bottom: -100%;
+		padding: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: $fair;
+		text-decoration: none;
+
+		.container {
+			position: absolute;
+			bottom: 10px;
+		}
+	}
+
+	.image {
+		position: relative;
+		z-index: 0;
+		width: 100%;
+	}
+
+	.title {
+		position: relative;
+		margin: 0 0 10px;
+		padding: 0 fluidity(20px, $small-block);
+		@include use-font($museo-sans, $px18, normal, 900);
+		text-transform: uppercase;
+	}
+
+	.byline {
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 0 fluidity(20px, $small-block);
+		@include use-font($museo-sans, $px14, normal, 700);
+		text-transform: uppercase;
+	}
+	
+}

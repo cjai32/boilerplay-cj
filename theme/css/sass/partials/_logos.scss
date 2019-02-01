@@ -1,0 +1,42 @@
+.logos {
+	float: left;
+	display: block;
+	margin: 0 fluidity(20px, $desktop);
+
+	a {
+		position: relative;
+		display: block;
+		height: 35px;
+		@include use-font($gotham-black, $px20, normal, normal);
+		color: $fair;
+		line-height: 35px;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include anchor-links($fair, $fair, $fair, $fair, $fair);
+	}
+
+	img {
+		display: inline-block;
+		margin: -3px 0;
+		padding-right: 10px;
+	}
+
+	&.logo-header {}
+
+	&.logo-footer {
+		margin-top: 40px;
+		width: 100%;
+		height: 150px;
+
+		a {
+			height: auto;
+			text-align: center;
+		}
+
+		img {
+			margin: 0;
+			padding-right: 0;
+		}
+	}
+
+}

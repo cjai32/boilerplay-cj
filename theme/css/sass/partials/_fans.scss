@@ -1,0 +1,33 @@
+.fans {
+	padding: 30px 0;
+	color: $fair;
+	background: $dark-gray url(../img/connect-bg.png) 0 0 no-repeat;
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		margin: 0;
+		@include use-font($museo-sans, $px30, normal, 500);
+
+		& + p {
+			position: relative;
+			top: auto;
+			margin: 11px 0 15px;
+			color: $fair;
+			text-align: left;
+		}
+
+	}
+
+	p {
+		position: relative;
+		top: 15px;
+		margin: 0;
+		@include use-font($museo-sans, $px14, normal, 500);
+		color: $green;
+		text-align: right;
+	}
+
+}

@@ -1,0 +1,32 @@
+.social-links {
+	margin-right: fluidity(20px, $small-container);
+
+
+	ul {
+		margin: 0;
+		padding: 0;
+		@include clearfix();
+
+		li {
+			float: left;
+			display: block;
+			margin: 12.5px 0 12.5px 20px;
+			
+			color:$orange;
+			font-weight:400;
+			font-size:13px;
+			/*&:first-child {
+				margin-left: 0;
+			}*/
+
+			a {
+				text-decoration: none;
+				text-indent: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				
+			}
+
+		}
+	}
+}

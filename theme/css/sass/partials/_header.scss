@@ -1,0 +1,61 @@
+header {
+	position: relative;
+	z-index: 9998;
+	width: 100%;
+
+	&.fixed {
+
+		top: 0;
+
+		.bottom-row {
+			padding: 0 15rem 0 15rem;
+			background-color:#fdcb0a;
+		}
+	}
+
+	.top-row {
+		position: relative;
+		background-color: $dark-violet;
+		z-index: 1;
+		@include clearfix();
+	}
+
+	.middle-row {
+		position: relative;
+		z-index: 0;
+		
+		overflow: hidden;
+		background-color:$lighter-dark;
+		
+
+		.mobile-icons {
+			position: absolute;
+			top: 0;
+			z-index: 2;
+			display: none;
+		}
+		img{
+			margin: 0 auto;
+			
+		}
+
+	}
+
+	.bottom-row {
+		
+		@include clearfix();
+
+		& > div {
+			width: fluidity(480px, $desktop);
+			text-align: right;
+
+			&:first-child {
+				width: fluidity(800px, $desktop);
+				text-align: left;
+			}
+			
+		}
+		
+	}
+
+}
